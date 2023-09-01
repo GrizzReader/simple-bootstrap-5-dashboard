@@ -1,3 +1,23 @@
+def get_price_from_vendor_A(part_id):
+    # API call to Vendor A
+    return 50  # returns price for the part
+
+def get_price_from_vendor_B(part_id):
+    # API call to Vendor B
+    return 60  # returns price for the part
+
+def compare_prices(part_id):
+    price_A = get_price_from_vendor_A(part_id)
+    price_B = get_price_from_vendor_B(part_id)
+    
+    if price_A < price_B:
+        return f"Vendor A is cheaper with a price of ${price_A}"
+    elif price_B < price_A:
+        return f"Vendor B is cheaper with a price of ${price_B}"
+    else:
+        return f"Both vendors have the same price of ${price_A}"
+
+print(compare_prices("part_123"))
 <!DOCTYPE html>
 <html lang="en">
 <head>
